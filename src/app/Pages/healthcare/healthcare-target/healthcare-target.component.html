@@ -1,0 +1,39 @@
+<!--  -->
+<div class="target-banar">
+  <div class="overlay"></div>
+  <div class="target">
+    <div class="container">
+      <h2
+        class="header-con text-center wow flash"
+        data-wow-duration="1.5s"
+        data-wow-offset="100"
+        data-wow-delay="0.5s"
+      >
+        Healthcare Target Audience &amp; Sectors
+      </h2>
+      <ng-container *ngFor="let item of data; let i = index">
+        <div
+          class="row"
+          [ngStyle]="{
+            'flex-direction': (i + 1) % 2 == 1 ? 'row' : 'row-reverse'
+          }"
+        >
+          <div
+            class="col-md-6 item wow"
+            [ngClass]="(i + 1) % 2 == 1 ? 'one bounceInDown' : 'two bounceInUp'"
+            data-wow-duration="1.5s"
+            data-wow-offset="100"
+            data-wow-delay="0.5s"
+          >
+            <div class="card mb-3" style="max-width: 540px">
+              <div class="card-body">
+                <span class="badge">{{ i + 1 }}</span>
+                <h5 class="card-title">{{ item }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
